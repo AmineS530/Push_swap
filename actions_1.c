@@ -6,14 +6,15 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:39:05 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/10 11:43:09 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/12 17:51:02 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
 
-void	swap_a()
+void	swap_a(stack stack_a)
 {
+	// code to swap
 	ft_printf("sa\n");
 }
 

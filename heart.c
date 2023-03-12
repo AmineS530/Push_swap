@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:32:16 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/10 12:11:23 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/12 18:38:16 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ int main(int argc, char *argv[])
 	if (argc == 1)
 		exit(1);
 	else
-		ft_printf("%sHello World!%s", YELLOW, DEFAULT);
+	{
+		// ft_printf("%sHello World!%s", YELLOW, DEFAULT);
+		apply_checks(argv);
+	}
 
-	return (0);
+	return (69);
 }
