@@ -6,15 +6,15 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:06:28 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/07 20:36:21 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/14 11:21:44 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int	sign;
-	int	result;
-	int	owo;
+	int		sign;
+	long	result;
+	int		owo;
 
 	sign = 1;
 	owo = 0;

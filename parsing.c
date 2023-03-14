@@ -6,38 +6,41 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/12 18:45:58 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/14 11:51:03 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
 
-t_tools	apply_checks(char **argv)
+t_kit	apply_checks(char **argv)
 {
-	t_tools	tool;
+	t_kit	tool;
 
-	tool.i = -1;
+	tool.i = 0;
 	tool.x = 0;
 	get_numbers(&tool, argv);
 	check_for_digits(&tool);
 	convert_ncheck_dups(&tool);
+	check_minmax(&tool);
+	//system("leaks push_swap");
 	return (tool);
 }
 
-void	get_numbers(t_tools *thing, char **argv)
+void	get_numbers(t_kit *thing, char **argv)
 {
-	thing->joined = ft_strdup(" ");
-	while (argv[++thing->i])
+	thing->joined = ft_strdup("");
+	while (argv[thing->i])
 	{
 		thing->joined = ft_strjoin(thing->joined, " ", 69);
-		thing->joined = ft_strjoin(thing->joined, argv[thing->i], 1);
+		thing->joined = ft_strjoin(thing->joined, argv[thing->i], 69);
+		thing->i++;
 	}
 	thing->nmiro = ft_split(thing->joined, ' ');
 	while (thing->nmiro[thing->x])
 		thing->x++;
 }
 
-void	check_for_digits(t_tools *thing)
+void	check_for_digits(t_kit *thing)
 {
 	int	j;
 
@@ -47,7 +50,7 @@ void	check_for_digits(t_tools *thing)
 		j = 0;
 		while (thing->nmiro[thing->i][j])
 		{
-			if (!ft_isdigit(thing->nmiro[thing->i][j]))
+			if (!better_ft_isdigit(thing->nmiro[thing->i]))
 			{
 				printf("found this shit %c\n", thing->nmiro[thing->i][j]);
 				ft_putstr_fd(RED "Error\nInvalid Characters" DEFAULT, 2);
@@ -58,13 +61,13 @@ void	check_for_digits(t_tools *thing)
 	}
 }
 
-void	convert_ncheck_dups(t_tools *nb)
+void	convert_ncheck_dups(t_kit *nb)
 {
 	static int	i;
 	static int	j;
 	int			k;
 
-	nb->mal = malloc(sizeof(int) * (nb->x + 1));
+	nb->mal = malloc(sizeof(long) * (nb->x + 1));
 	while (nb->nmiro[i])
 	{
 		nb->mal[i] = ft_atoi(nb->nmiro[i]);
@@ -82,10 +85,29 @@ void	convert_ncheck_dups(t_tools *nb)
 			}
 			k++;
 		}
-		ft_printf("%d\n", nb->mal[j]);
-		system("leaks push_swap");
+		printf("%ld\n", nb->mal[j]);
 	}
 }
+
+void	check_minmax(t_kit *input)
+{
+	input->i	= 0;
+	while (input->i < input->x)
+	{
+		if (input->mal[input->i] > 2147483647)
+		{
+			ft_putstr_fd(RED"Error\nNumber bigger than INT_MAX"DEFAULT, 2);
+			exit (1);
+		}
+		if (input->mal[input->i] < -2147483648)
+		{
+			ft_putstr_fd(RED"Error\nNumber smaller than INT_MIN"DEFAULT, 2);
+			exit (1);
+		}
+		input->i++;
+	}
+}
+
 // char *** argschad = [
 // 	["140", "2", "3"],
 // 	["4"],

@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:20:02 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/12 16:44:47 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/14 11:55:09 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 // part 1
 
-int					ft_atoi(const char *str);
+long				ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 int					ft_isalnum(int c);
