@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/14 11:51:03 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/15 07:56:51 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	convert_ncheck_dups(t_kit *nb)
 
 void	check_minmax(t_kit *input)
 {
-	input->i	= 0;
+	input->i = 0;
 	while (input->i < input->x)
 	{
 		if (input->mal[input->i] > 2147483647)

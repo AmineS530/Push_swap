@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/14 11:42:54 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/15 07:59:42 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@
 # define CYAN "\e[36m"
 # define DEFAULT "\033[0m"
 
-
-typedef	struct s_kit
+typedef struct s_kit
 {
 	int		i;
 	int		x;
@@ -30,7 +29,6 @@ typedef	struct s_kit
 	long	*mal;
 
 }	t_kit;
-
 
 // parsing.c
 t_kit		apply_checks(char **argv);
@@ -41,6 +39,5 @@ void		check_minmax(t_kit *input);
 
 // tools
 int			better_ft_isdigit(char *nbr);
-
 
 #endif
