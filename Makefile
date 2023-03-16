@@ -5,6 +5,7 @@ CFLAGS = -Wall -Wextra -Werror -c
 SRC = heart.c \
 	parsing.c \
 	tools.c \
+	stacks.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -17,7 +18,6 @@ $(NAME): $(OBJ) $(LIBFT_PATH)
 
 $(LIBFT_PATH):
 	make -C $(LIBFT)
-
 
 %.o : %.c swap_push.h
 	$(CC) $(CFLAGS) $< -o $@

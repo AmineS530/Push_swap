@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/15 07:56:51 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/16 11:38:25 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	convert_ncheck_dups(t_kit *nb)
 			}
 			k++;
 		}
-		printf("%ld\n", nb->mal[j]);
 	}
 }
 
@@ -113,11 +112,8 @@ void	check_minmax(t_kit *input)
 // 	["4"],
 // 	["5"]
 // ]
-
 // argschad[i]
-
 // ./push_swap "1 2 3" 4 5
-
 // all args are given to join
 // result -> "1 2 3 4 5"
 // then u split the result by space

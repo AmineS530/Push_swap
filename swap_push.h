@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/15 07:59:42 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/16 12:54:06 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_kit
 	char	*joined;
 	char	**nmiro;
 	long	*mal;
+	t_list	*a;
+	t_list	*b;
 
 }	t_kit;
 
@@ -39,5 +41,10 @@ void		check_minmax(t_kit *input);
 
 // tools
 int			better_ft_isdigit(char *nbr);
+void		print_elements(t_list *head);
+void		clear_list(t_list *head);
+
+// stacks
+void	ft_make_stacks(t_kit *stuff);
 
 #endif

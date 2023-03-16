@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 15:57:11 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/27 12:52:23 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/16 12:46:24 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst)
 {
 	t_list	*tmp;
 
-	if (!*del || !lst)
+	if (!lst)
 		return ;
 	tmp = (*lst);
 	while (lst && *lst)
@@ -26,7 +26,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 			while (tmp != NULL)
 			{
 				tmp = (*lst)->next;
-				del((*lst)->content);
 				free (*lst);
 				*lst = tmp;
 			}
