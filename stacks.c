@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 15:19:02 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 17:46:49 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ void	ft_make_stacks(t_kit *stuff)
 	printf ("\n B :|");
 	print_elements(stuff->b);
 	printf ("\n");
-	print_pos(stuff->a);
 }

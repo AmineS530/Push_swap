@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 13:58:15 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 15:22:07 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 18:22:31 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 void	rotate(t_list *stack)
 {
 	t_list	*tmp;
-
-	tmp = stack;
+	tmp = ft_lstlast(stack);
+	stack = tmp;
 	stack->next = NULL;
-	stack->next = tmp;
 }
 
 void	rotate_a(t_list *stack_a)
