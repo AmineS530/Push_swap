@@ -6,6 +6,10 @@ SRC = heart.c \
 	parsing.c \
 	tools.c \
 	stacks.c \
+	operations/op_swap.c \
+	operations/op_push.c \
+	operations/op_rotate.c \
+	operations/op_rev_rotate.c \
 
 OBJ = $(SRC:.c=.o)
 

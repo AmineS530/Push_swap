@@ -6,15 +6,15 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 21:32:16 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/16 11:17:25 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 14:11:50 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst)
 {
-	if (!del || !lst)
+	if (!lst)
 		return ;
 	free (lst);
 }

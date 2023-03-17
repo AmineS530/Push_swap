@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/16 11:38:25 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 13:45:12 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	check_for_digits(t_kit *thing)
 {
 	int	j;
 
-	thing->i = 0;
+	thing->i = 1;
 	while (thing->nmiro[++thing->i])
 	{
 		j = 0;
@@ -75,7 +75,7 @@ void	convert_ncheck_dups(t_kit *nb)
 	}
 	while (++j < nb->x)
 	{
-		k = 0;
+		k = 1;
 		while (k < nb->x)
 		{
 			if (k != j && nb->mal[j] == nb->mal[k])

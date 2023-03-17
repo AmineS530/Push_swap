@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   actions_1.c                                        :+:      :+:    :+:   */
+/*   op_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 11:39:05 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/12 17:51:02 by asadik           ###   ########.fr       */
+/*   Created: 2023/03/17 13:58:15 by asadik            #+#    #+#             */
+/*   Updated: 2023/03/17 15:22:07 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap_push.h"
+#include "../swap_push.h"
 
-void	swap_a(stack stack_a)
+void	rotate(t_list *stack)
 {
-	// code to swap
-	ft_printf("sa\n");
+	t_list	*tmp;
+
+	tmp = stack;
+	stack->next = NULL;
+	stack->next = tmp;
 }
 
-void	swap_b()
+void	rotate_a(t_list *stack_a)
 {
-	ft_printf("sb\n");
+	rotate(stack_a);
+	ft_putstr_fd("ra\n", 1);
 }
 
-void	swap_a_b()
+void	rotate_b(t_list *stack_b)
 {
-	ft_printf("ss\n");
+	rotate(stack_b);
+	ft_putstr_fd("rb\n", 1);
 }
 
-void	push_a()
+void	rotate_a_b(t_list *stack_a, t_list *stack_b)
 {
-	ft_printf("pa\n");
-}
-
-void	push_b()
-{
-	ft_printf("pb\n");
+	rotate(stack_a);
+	rotate(stack_b);
+	ft_putstr_fd("rr\n", 1);
 }

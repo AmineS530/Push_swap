@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/16 12:42:18 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 13:47:49 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,19 @@ void print_elements(t_list *head)
 	}
 }
 
-void clear_list(t_list *head)
+void print_pos(t_list *head)
 {
-	t_list *current_node;
-
-	while (head->next!= NULL)
+	t_list *current_node = head;
+	while (current_node != NULL)
 	{
-		current_node = head;
+		printf("%d|", current_node->position);
 		current_node = current_node->next;
-		free (current_node);
 	}
+}
+
+int empty_stack(t_list *stack)
+{
+	if (stack->content == 0 && stack->next == NULL)
+		return (1);
+	return (0);
 }

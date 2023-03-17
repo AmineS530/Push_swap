@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/16 12:54:06 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/17 15:02:04 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,24 @@ void		check_minmax(t_kit *input);
 // tools
 int			better_ft_isdigit(char *nbr);
 void		print_elements(t_list *head);
-void		clear_list(t_list *head);
+void		print_pos(t_list *head);
+int 		empty_stack(t_list *stack);
 
 // stacks
 void	ft_make_stacks(t_kit *stuff);
+
+
+// operations
+void	swap(t_list *stack);
+void	swap_a(t_list *stack_a);
+void	swap_b(t_list *stack_b);
+void	swap_a_b(t_list *stack_a, t_list *stack_b);
+void	push_a(t_list *stack_a, t_list *stack_b);
+void	push_b(t_list *stack_a, t_list *stack_b);
+void	rotate(t_list *stack);
+void	rotate_a(t_list *stack_a);
+void	rotate_b(t_list *stack_b);
+void	rotate_a_b(t_list *stack_a, t_list *stack_b);
+
 
 #endif
