@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:31:20 by asadik            #+#    #+#             */
-/*   Updated: 2022/10/27 15:40:53 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 16:47:40 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	*ft_revtab(char *str, int negative)
 	return (str);
 }
 
-static int	ft_nbr_len(long nb)
+int	ft_nbr_len(long nb)
 {
 	long	uwu;
 	int		owo;

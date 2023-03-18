@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 17:42:27 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 17:56:36 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	better_ft_isdigit(char *nbr)
 	}
 	return (ft_isdigit(nbr[i]));
 }
-
+// TODO: remove printf;
 void	print_elements(t_list *head)
 {
 	t_list *current_node = head;
@@ -46,9 +46,18 @@ t_list	*lstbeforelast(t_list *lst)
 	return (lst);
 }
 
-int	empty_stack(t_list *stack)
+/*int	is_sorted(t_list *stack)
 {
-	if (stack->content == 0 && stack->next == NULL)
-		return (1);
+	int	i;
+	i = 0;
+	while (i < ft_lstsize(stack))
+	{
+		if (stack->content  stack->next->content)
+		{
+			stack = stack->next;
+		}
+		i++;
+	}
 	return (0);
 }
+*/

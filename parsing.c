@@ -6,17 +6,18 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 13:45:12 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 17:09:54 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
 
+//! Remove the description of the error if its not allowed
+
 t_kit	apply_checks(char **argv)
 {
-	t_kit	tool;
+	t_kit		tool;
 
-	tool.i = 0;
 	tool.x = 0;
 	get_numbers(&tool, argv);
 	check_for_digits(&tool);
@@ -28,9 +29,12 @@ t_kit	apply_checks(char **argv)
 
 void	get_numbers(t_kit *thing, char **argv)
 {
+	thing->i = 1;
 	thing->joined = ft_strdup("");
+
 	while (argv[thing->i])
 	{
+		check_arg(argv[thing->i]);
 		thing->joined = ft_strjoin(thing->joined, " ", 69);
 		thing->joined = ft_strjoin(thing->joined, argv[thing->i], 69);
 		thing->i++;
@@ -44,20 +48,21 @@ void	check_for_digits(t_kit *thing)
 {
 	int	j;
 
-	thing->i = 1;
-	while (thing->nmiro[++thing->i])
+	thing->i = 0;
+	while (thing->nmiro[thing->i])
 	{
 		j = 0;
 		while (thing->nmiro[thing->i][j])
 		{
 			if (!better_ft_isdigit(thing->nmiro[thing->i]))
 			{
-				printf("found this shit %c\n", thing->nmiro[thing->i][j]);
+				printf("found this shit %s\n", thing->nmiro[thing->i]);
 				ft_putstr_fd(RED "Error\nInvalid Characters" DEFAULT, 2);
 				exit(EXIT_FAILURE);
 			}
 			j++;
 		}
+		thing->i++;
 	}
 }
 
@@ -73,9 +78,9 @@ void	convert_ncheck_dups(t_kit *nb)
 		nb->mal[i] = ft_atoi(nb->nmiro[i]);
 		i++;
 	}
-	while (++j < nb->x)
+	while (j < nb->x)
 	{
-		k = 1;
+		k = 0;
 		while (k < nb->x)
 		{
 			if (k != j && nb->mal[j] == nb->mal[k])
@@ -85,6 +90,7 @@ void	convert_ncheck_dups(t_kit *nb)
 			}
 			k++;
 		}
+		j++;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:32:16 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 13:31:24 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 15:04:56 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int argc, char *argv[])
 {
 	t_kit	stuff;
+
 	if (argc == 1)
 		exit(1);
 	else
@@ -23,7 +24,7 @@ int	main(int argc, char *argv[])
 		ft_make_stacks(&stuff);
 		ft_lstclear(&stuff.a);
 		ft_lstclear(&stuff.b);
-	//	system("leaks push_swap");
+		// system("leaks push_swap");
 	}
 	return (69);
 }

@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   parsing_2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 19:26:13 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 16:04:47 by asadik           ###   ########.fr       */
+/*   Created: 2023/03/18 17:09:44 by asadik            #+#    #+#             */
+/*   Updated: 2023/03/18 17:10:29 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "swap_push.h"
 
-t_list	*ft_lstnew(long content)
+void	check_arg(char *arg)
 {
-	t_list	*poggers;
+	int	i;
 
-	poggers = malloc(sizeof(t_list));
-	if (!poggers)
-		return (NULL);
-	poggers->content = content;
-	poggers->position = -1;
-	poggers->next = NULL;
-	return (poggers);
+	i = 0;
+	if (ft_strlen(arg) == 0)
+	{
+		ft_putstr_fd(RED"Error\nEmpty String", 2);
+		exit(1);
+	}
+	while (arg[i])
+	{
+		if (arg[i] != ' ')
+			return ;
+		i++;
+	}
+	ft_putstr_fd(RED"Error\nConsective spaces", 2);
+	exit (1);
 }

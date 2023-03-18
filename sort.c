@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 19:26:13 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 16:04:47 by asadik           ###   ########.fr       */
+/*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
+/*   Updated: 2023/03/18 17:57:00 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "swap_push.h"
 
-t_list	*ft_lstnew(long content)
+/*void	sort_two(t_kit *info)
 {
-	t_list	*poggers;
-
-	poggers = malloc(sizeof(t_list));
-	if (!poggers)
-		return (NULL);
-	poggers->content = content;
-	poggers->position = -1;
-	poggers->next = NULL;
-	return (poggers);
+	if (ft_lstsize(info->a) <= 1)
+		return;
+	if (!is_sorted(info->a) && ft_lstsize(info->a) == 2)
+		swap_a(&info->a);
 }
+
+void	sort_three(t_kit *info)
+{
+if (info->a->content == biggest_element)
+}
+*/
