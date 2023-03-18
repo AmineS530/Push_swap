@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:46:23 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 11:43:06 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 12:07:09 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,20 @@ void	rev_rotate(t_list **stack)
 
 void	rev_rotate_a(t_list **stack_a)
 {
-	rotate(stack_a);
+	rev_rotate(stack_a);
 	ft_putstr_fd(YELLOW"rra\n"DEFAULT, 1);
 }
 
 void	rev_rotate_b(t_list **stack_b)
 {
-	rotate(stack_b);
+	rev_rotate(stack_b);
 	ft_putstr_fd(YELLOW"rrb\n"DEFAULT, 1);
 }
 
 void	rev_rotate_a_b(t_list **stack_a, t_list **stack_b)
 {
-	rotate(stack_a);
-	rotate(stack_b);
+	rev_rotate(stack_a);
+	rev_rotate(stack_b);
 	ft_putstr_fd(YELLOW"rrr\n"DEFAULT, 1);
 }
 
