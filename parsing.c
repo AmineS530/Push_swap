@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 17:09:54 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 22:00:40 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ t_kit	apply_checks(char **argv)
 	check_for_digits(&tool);
 	convert_ncheck_dups(&tool);
 	check_minmax(&tool);
-	//system("leaks push_swap");
 	return (tool);
 }
 
@@ -31,7 +30,6 @@ void	get_numbers(t_kit *thing, char **argv)
 {
 	thing->i = 1;
 	thing->joined = ft_strdup("");
-
 	while (argv[thing->i])
 	{
 		check_arg(argv[thing->i]);

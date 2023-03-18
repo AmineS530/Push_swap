@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:46:23 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 17:08:23 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:59:26 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	rev_rotate(t_list **stack)
 	tmp = lstbeforelast(*stack);
 	tmp->next = NULL;
 	end->next = (*stack);
-	(*stack)= end;
+	(*stack) = end;
 }
 
 void	rev_rotate_a(t_list **stack_a)
@@ -42,4 +42,3 @@ void	rev_rotate_a_b(t_list **stack_a, t_list **stack_b)
 	rev_rotate(stack_b);
 	ft_putstr_fd(YELLOW"rrr\n"DEFAULT, 1);
 }
-

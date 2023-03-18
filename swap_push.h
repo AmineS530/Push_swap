@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 21:26:56 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 22:01:29 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,16 @@ void		check_for_digits(t_kit *thing);
 void		convert_ncheck_dups(t_kit *nb);
 void		check_minmax(t_kit *input);
 // parsing_2
-void	check_arg(char *arg);
+void		check_arg(char *arg);
 
 // tools
 int			better_ft_isdigit(char *nbr);
 void		print_elements(t_list *head);
 t_list		*lstbeforelast(t_list *lst);
-void 		print_pos(t_list *head);
+void		print_pos(t_list *head);
 // tools_2
-void 		indexing(t_kit *kit);
+void		indexing(t_kit *kit);
 long		get_min(t_list *stack);
-
 
 // stacks
 void		ft_make_stacks(t_kit *stuff);

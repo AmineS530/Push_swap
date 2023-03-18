@@ -6,17 +6,17 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:27:52 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 21:51:27 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 22:04:48 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
 
-void indexing(t_kit *kit)
+void	indexing(t_kit *kit)
 {
-	static int i;
-	long	tmp;
-	t_list	*head;
+	static int	i;
+	long		tmp;
+	t_list		*head;
 
 	kit->i = 0;
 	head = kit->a;
@@ -34,9 +34,11 @@ void indexing(t_kit *kit)
 	}
 }
 
-void print_pos(t_list *head)
+void	print_pos(t_list *head)
 {
-	t_list *current_node = head;
+	t_list	*current_node;
+
+	current_node = head;
 	while (current_node != NULL)
 	{
 		printf("%d|", current_node->position);
@@ -61,4 +63,3 @@ long	get_min(t_list *stack)
 		return (min);
 	return (head->content);
 }
-

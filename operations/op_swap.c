@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:39:05 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 13:44:38 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 21:58:37 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,3 @@ void	swap_a_b(t_list **stack_a, t_list **stack_b)
 	swap(stack_b);
 	ft_putstr_fd(YELLOW"ss\n"DEFAULT, 1);
 }
-
-
