@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:39:05 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 14:35:05 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 11:25:29 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,20 @@ void	swap(t_list *stack)
 void	swap_a(t_list *stack_a)
 {
 	swap(stack_a);
-	ft_putstr_fd("sa\n", 1);
+	ft_putstr_fd(YELLOW"sa\n"DEFAULT, 1);
 }
 
 void	swap_b(t_list *stack_b)
 {
 	swap(stack_b);
-	ft_putstr_fd("sb\n", 1);
+	ft_putstr_fd(YELLOW"sb\n"DEFAULT, 1);
 }
 
 void	swap_a_b(t_list *stack_a, t_list *stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_putstr_fd("ss\n", 1);
+	ft_putstr_fd(YELLOW"ss\n"DEFAULT, 1);
 }
 
 

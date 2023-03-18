@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/17 17:46:49 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/18 11:44:23 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_make_stacks(t_kit *stuff)
 		ft_lstadd_back(&stuff->a, new);
 	}
 	stuff->b = ft_lstnew(0);
-	rotate_a(stuff->a);
+	rev_rotate(&stuff->a);
 	print_elements(stuff->a);
 	printf ("\n B :|");
 	print_elements(stuff->b);
