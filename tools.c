@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 22:02:51 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 09:54:40 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	print_elements(t_list *head)
 	current_node = head;
 	while (current_node != NULL)
 	{
-		printf("%ld|", current_node->content);
+		printf("%ld \n", current_node->content);
 		current_node = current_node->next;
 	}
 }
@@ -49,18 +49,19 @@ t_list	*lstbeforelast(t_list *lst)
 	return (lst);
 }
 
-/*int	is_sorted(t_list *stack)
+int	is_sorted(t_list *stack)
 {
+	t_list	*head;
+
+	head = stack;
 	int	i;
 	i = 0;
-	while (i < ft_lstsize(stack))
+	while (head != NULL && head->next != NULL)
 	{
-		if (stack->content  stack->next->content)
-		{
-			stack = stack->next;
-		}
-		i++;
+		if (head->position > head->next->position)
+			return (0);
+		head = head->next;
 	}
-	return (0);
+	return (1);
 }
-*/
+

@@ -8,6 +8,7 @@ SRC = heart.c \
 	tools.c \
 	tools_2.c \
 	stacks.c \
+	sort.c \
 	operations/op_swap.c \
 	operations/op_push.c \
 	operations/op_rotate.c \

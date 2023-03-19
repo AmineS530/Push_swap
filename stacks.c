@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 22:00:05 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 09:56:33 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_make_stacks(t_kit *stuff)
 	stuff->i = 0;
 	stuff->a = ft_lstnew(stuff->mal[stuff->i]);
 	head = stuff->a;
-	printf ("\n A :|");
 	while (++stuff->i < stuff->x)
 	{
 		new = ft_lstnew(stuff->mal[stuff->i]);
@@ -28,12 +27,12 @@ void	ft_make_stacks(t_kit *stuff)
 	}
 	stuff->b = NULL;
 	stuff->i = 0;
-	rotate_a(&stuff->a);
-	print_elements(stuff->a);
 	indexing(stuff);
-	printf ("\n B :|");
-	print_elements(stuff->b);
+	sort_three(&stuff->a);
+	print_elements(stuff->a);
+	printf ("---- \n A \n");
+	// print_elements(stuff->b);
+	// printf ("---- \n B \n");
 	printf ("\n");
-	stuff->a = head;
 	print_pos(stuff->a);
 }

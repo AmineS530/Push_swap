@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:27:52 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 22:04:48 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 09:41:53 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	indexing(t_kit *kit)
 	{
 		head = kit->a;
 		tmp = get_min(kit->a);
-		printf("\n%li\n", tmp);
+		// printf("\n%li\n", tmp);
 		while (head != NULL)
 		{
 			if (head->content == tmp && head->position == -1)
@@ -60,6 +60,24 @@ long	get_min(t_list *stack)
 		head = head->next;
 	}
 	if (min != 2147483648)
+		return (min);
+	return (head->content);
+}
+
+long	get_max(t_list *stack)
+{
+	t_list		*head;
+	long		min;
+
+	head = stack;
+	min = -2147483649;
+	while (head != NULL)
+	{
+		if (min < head->content)
+				min = head->content;
+		head = head->next;
+	}
+	if (min > -2147483649)
 		return (min);
 	return (head->content);
 }
