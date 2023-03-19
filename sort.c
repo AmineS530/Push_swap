@@ -6,23 +6,18 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 09:56:42 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 13:24:56 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
 
-void	sort_two(t_list **stack, int flag)
+void	sort_two(t_list **stack)
 {
 	if (ft_lstsize(*stack) <= 1)
-		return;
+		return ;
 	if (!is_sorted(*stack) && ft_lstsize(*stack) == 2)
-	{
-		if (flag == 69)
-			swap_a(stack);
-		else
-			swap_b(stack);
-	}
+		swap_a(stack);
 }
 
 void	sort_three(t_list **stack)
@@ -38,13 +33,39 @@ void	sort_three(t_list **stack)
 		swap_a(stack);
 }
 
-void	sort_four(t_list **stack)
+void	sort_four(t_kit *data)
 {
-	t_list	*head;
+	if (!is_sorted(data->a))
+	{
+		while (data->a->position < data->x && data->a->position != 0)
+			rotate_a(&data->a);
+		while (data->a->position >= data->x && data->a->position != 0)
+			rev_rotate_a(&data->a);
+		push_b(&data->a, &data->b);
+		sort_three(&data->a);
+		push_a(&data->a, &data->b);
+	}
+}
 
-	head = (*stack);
-	while (head->position != 0 && head != NULL)
-		head = head->next;
-		
-
+void	sort_five(t_kit *data)
+{
+	if (!is_sorted(data->a))
+	{
+		while (data->a->position < data->x && data->a->position != 0)
+			rotate_a(&data->a);
+		while (data->a->position >= data->x && data->a->position != 0)
+			rev_rotate_a(&data->a);
+		push_b(&data->a, &data->b);
+		while (data->a->position != 1)
+		{
+			if (data->a->position > data->x)
+				rev_rotate_a(&data->a);
+			else
+				rotate_a(&data->a);
+		}
+		push_b(&data->a, &data->b);
+		sort_three(&data->a);
+		push_a(&data->a, &data->b);
+		push_a(&data->a, &data->b);
+	}
 }

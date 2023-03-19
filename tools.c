@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 09:54:40 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 13:25:52 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ t_list	*lstbeforelast(t_list *lst)
 int	is_sorted(t_list *stack)
 {
 	t_list	*head;
+	int		i;
 
 	head = stack;
-	int	i;
 	i = 0;
 	while (head != NULL && head->next != NULL)
 	{
@@ -64,4 +64,3 @@ int	is_sorted(t_list *stack)
 	}
 	return (1);
 }
-

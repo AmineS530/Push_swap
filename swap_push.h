@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 09:37:53 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 13:25:12 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ long		get_max(t_list *stack);
 
 // stacks
 void		ft_make_stacks(t_kit *stuff);
+void		ft_sort(t_kit *stuff);
 
 // operations
 void		swap(t_list **stack);
@@ -72,7 +73,9 @@ void		rev_rotate_b(t_list **stack_b);
 void		rev_rotate_a_b(t_list **stack_a, t_list **stack_b);
 
 // sorting :D
-void	sort_two(t_list **stack, int flag);
-void	sort_three(t_list **stack);
+void		sort_two(t_list **stack);
+void		sort_three(t_list **stack);
+void		sort_four(t_kit *data);
+void		sort_five(t_kit *data);
 
 #endif

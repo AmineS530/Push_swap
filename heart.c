@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:32:16 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 15:04:56 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 13:21:29 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ int	main(int argc, char *argv[])
 	{
 		stuff = apply_checks(argv);
 		ft_make_stacks(&stuff);
+		ft_sort(&stuff);
 		ft_lstclear(&stuff.a);
 		ft_lstclear(&stuff.b);
 		// system("leaks push_swap");
 	}
-	return (69);
+	return (0);
 }
