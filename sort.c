@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 13:24:56 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/19 18:16:33 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,9 @@ void	sort_five(t_kit *data)
 		push_a(&data->a, &data->b);
 		push_a(&data->a, &data->b);
 	}
+}
+
+void	sort_rest(t_kit)
+{
+	
 }
