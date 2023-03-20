@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 15:46:16 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 16:19:20 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_make_stacks(t_kit *stuff)
 	while (++stuff->i < stuff->x)
 	{
 		new = ft_lstnew(stuff->mal[stuff->i]);
-		new->order = stuff->i;
 		ft_lstadd_back(&stuff->a, new);
 	}
 	stuff->b = NULL;
@@ -40,10 +39,12 @@ void	ft_sort(t_kit *stuff)
 		sort_four(stuff);
 	else if (stuff->x == 5)
 		sort_five(stuff);
-	// print_elements(stuff->a);
-	// printf ("---- \n A \n");
-	// print_elements(stuff->b);
-	// printf ("---- \n B \n");
+	else if (stuff->x > 5)
+		sort_bigger_than_five(stuff);
+	print_elements(stuff->a);
+	printf ("---- \n A \n");
+	print_elements(stuff->b);
+	printf ("---- \n B \n");
 	// printf ("\n");
 	// print_pos(stuff->a);
 }

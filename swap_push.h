@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 13:25:12 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 14:01:07 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SWAP_PUSH_H
 
 # include "Utils/libft/libft.h"
+# include <math.h>
 # define RED "\e[31m"
 # define YELLOW "\e[33m"
 # define GREEN "\e[32m"
@@ -24,6 +25,7 @@ typedef struct s_kit
 {
 	int		i;
 	int		x;
+	int		chunk;
 	char	*joined;
 	char	**nmiro;
 	long	*mal;
@@ -44,11 +46,12 @@ void		check_arg(char *arg);
 int			better_ft_isdigit(char *nbr);
 void		print_elements(t_list *head);
 t_list		*lstbeforelast(t_list *lst);
-void		print_pos(t_list *head);
 int			is_sorted(t_list *stack);
+int			ft_sqrt(int nb);
 
 // tools_2
 void		indexing(t_kit *kit);
+void		print_pos(t_list *head);
 long		get_min(t_list *stack);
 long		get_max(t_list *stack);
 
@@ -77,5 +80,6 @@ void		sort_two(t_list **stack);
 void		sort_three(t_list **stack);
 void		sort_four(t_kit *data);
 void		sort_five(t_kit *data);
+void		sort_bigger_than_five(t_kit *data);
 
 #endif

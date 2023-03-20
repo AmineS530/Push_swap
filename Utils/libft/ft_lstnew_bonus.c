@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:26:13 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 16:04:47 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 16:09:41 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_list	*ft_lstnew(long content)
 		return (NULL);
 	poggers->content = content;
 	poggers->position = -1;
+	poggers->order = -1;
 	poggers->next = NULL;
 	return (poggers);
 }
