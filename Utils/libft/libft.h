@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:20:02 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 10:48:52 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 18:59:08 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ typedef struct s_list
 {
 	long			content;
 	int				position;
-	int				order;
 	struct s_list	*next;
 }					t_list;
 

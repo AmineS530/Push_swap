@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:43:37 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 15:17:57 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 19:20:47 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	push_b(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
 
+	if (ft_lstsize(*stack_a) <= 1)
+		return ;
 	if ((*stack_b))
 		push(stack_a, stack_b);
 	else if (!(*stack_b))
@@ -41,7 +43,6 @@ void	push_b(t_list **stack_a, t_list **stack_b)
 		tmp = (*stack_a);
 		(*stack_b) = ft_lstnew((*stack_a)->content);
 		(*stack_b)->position = (*stack_a)->position;
-		(*stack_b)->order = (*stack_a)->order;
 		(*stack_a) = (*stack_a)->next;
 		free (tmp);
 	}

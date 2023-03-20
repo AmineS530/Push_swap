@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 14:01:07 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 19:02:43 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_kit
 {
 	int		i;
 	int		x;
-	int		chunk;
 	char	*joined;
 	char	**nmiro;
 	long	*mal;
@@ -54,6 +53,7 @@ void		indexing(t_kit *kit);
 void		print_pos(t_list *head);
 long		get_min(t_list *stack);
 long		get_max(t_list *stack);
+int			max_index(t_list *stack);
 
 // stacks
 void		ft_make_stacks(t_kit *stuff);

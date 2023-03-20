@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 16:19:20 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/20 19:03:50 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	ft_make_stacks(t_kit *stuff)
 
 	stuff->i = 0;
 	stuff->a = ft_lstnew(stuff->mal[stuff->i]);
-	stuff->a->order = stuff->i;
 	while (++stuff->i < stuff->x)
 	{
 		new = ft_lstnew(stuff->mal[stuff->i]);
