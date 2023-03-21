@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:22:39 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 20:58:08 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 21:13:32 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	apply_input(char *str, t_kit *stack)
 		if (ft_strncmp(str, "rra\n", 5) == 0)
 			rev_rotate_a(&stack->a);
 		else if (ft_strncmp(str, "rrb\n", 5) == 0)
-			rev_rotate_b(&stack->a);
+			rev_rotate_b(&stack->b);
 		else if (ft_strncmp(str, "rrr\n", 5) == 0)
 			rev_rotate_a_b(&stack->a, &stack->b);
 		else
@@ -73,7 +73,7 @@ void	instructions_check(char *str, t_kit *stack)
 	else if (ft_strncmp(str, "ra\n", 4) == 0)
 		rotate_a(&stack->a);
 	else if (ft_strncmp(str, "rb\n", 4) == 0)
-		rotate_b(&stack->a);
+		rotate_b(&stack->b);
 	else if (ft_strncmp(str, "rr\n", 4) == 0)
 		rotate_a_b(&stack->a, &stack->b);
 	else
