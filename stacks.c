@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 11:25:25 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 12:19:03 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 15:28:30 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,4 @@ void	ft_sort(t_kit *stuff)
 		sort_five(stuff);
 	else if (stuff->x > 5)
 		sort_big(stuff);
-	// print_elements(stuff->a);
-	// printf ("---- \n A \n");
-	// print_elements(stuff->b);
-	// printf ("---- \n B \n");
-	// printf ("\n");
-	// print_pos(stuff->a);
 }

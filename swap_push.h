@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 12:24:48 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 15:28:10 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ typedef struct s_kit
 	long	*mal;
 	t_list	*a;
 	t_list	*b;
-
 }	t_kit;
+
 // parsing
 t_kit		apply_checks(char **argv);
 void		get_numbers(t_kit *thing, char **argv);
@@ -47,7 +47,6 @@ int			better_ft_isdigit(char *nbr);
 void		print_elements(t_list *head);
 t_list		*lstbeforelast(t_list *lst);
 int			is_sorted(t_list *stack);
-int			ft_sqrt(int nb);
 
 // tools_2
 void		indexing(t_kit *kit);
@@ -83,8 +82,10 @@ void		sort_five(t_kit *data);
 void		sort_big(t_kit *data);
 
 // sort_utils
+int			ft_sqrt(int nb);
 void		stacka_to_b(t_kit *data);
 void		stackb_to_a(t_kit *data);
 int			max_index(t_list *stack);
+int			is_rev_sorted(t_list *stack);
 
 #endif

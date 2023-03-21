@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 10:31:31 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 13:30:06 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 15:28:00 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,12 @@ void	stacka_to_b(t_kit *data)
 			data->i++;
 		}
 		else
-			rotate_a(&data->a);
+		{
+			if (is_rev_sorted(data->a) == 1)
+				rev_rotate_a(&data->a);
+			else
+				rotate_a(&data->a);
+		}
 	}
 }
 
@@ -79,4 +84,20 @@ int	max_index(t_list *stack)
 		moves_to_biggest++;
 	}
 	return (index_max);
+}
+
+int	is_rev_sorted(t_list *stack)
+{
+	t_list	*head;
+	int		i;
+
+	head = stack;
+	i = 0;
+	while (head != NULL && head->next != NULL)
+	{
+		if (head->position < head->next->position)
+			return (0);
+		head = head->next;
+	}
+	return (1);
 }

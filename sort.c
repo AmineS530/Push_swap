@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 13:28:53 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 15:27:43 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,6 @@ void	sort_big(t_kit *data)
 		data->chunk_size = (data->x / uwu) + (data->x % uwu);
 	else
 		data->chunk_size = (data->x / uwu);
-	// printf("\n chunk size %d\n number of chunks %d\n", data->chunk_size, uwu);
 	if (!is_sorted(data->a))
 	{
 		stacka_to_b(data);
