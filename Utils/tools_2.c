@@ -6,11 +6,11 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:27:52 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 15:27:15 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 17:24:05 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap_push.h"
+#include "../swap_push.h"
 
 void	indexing(t_kit *kit)
 {

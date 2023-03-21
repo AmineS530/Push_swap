@@ -6,11 +6,11 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 13:29:45 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 17:24:12 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "swap_push.h"
+#include "../swap_push.h"
 
 int	better_ft_isdigit(char *nbr)
 {

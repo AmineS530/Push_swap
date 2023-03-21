@@ -5,8 +5,8 @@ CFLAGS = -Wall -Wextra -Werror -c
 SRC = heart.c \
 	parsing.c \
 	parsing_2.c \
-	tools.c \
-	tools_2.c \
+	Utils/tools.c \
+	Utils/tools_2.c \
 	stacks.c \
 	sort.c \
 	sort_utils.c \

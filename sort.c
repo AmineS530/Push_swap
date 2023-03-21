@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 17:11:14 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 17:37:39 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,10 @@ void	sort_big(t_kit *data)
 	data->i = 0;
 	uwu = ((ft_sqrt(data->x) / 2));
 	if (uwu == 0)
-		data->chunk_size = (data->x / uwu) + (data->x % uwu);
+		data->chunk_size = (data->x % uwu);
 	else
-		data->chunk_size = (data->x / uwu);
-	if (data->x <= 500)
+		data->chunk_size = (data->x / uwu) + (data->x % uwu);
+	if (data->x >= 500)
 		data->chunk_size = 35;
 	if (!is_sorted(data->a))
 	{
