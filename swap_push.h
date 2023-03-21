@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 19:02:43 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 11:07:51 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_kit
 {
 	int		i;
 	int		x;
+	int		chunk_size;
 	char	*joined;
 	char	**nmiro;
 	long	*mal;
@@ -81,5 +82,8 @@ void		sort_three(t_list **stack);
 void		sort_four(t_kit *data);
 void		sort_five(t_kit *data);
 void		sort_bigger_than_five(t_kit *data);
+
+// sort_utils
+void	stacka_to_b(t_kit *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:46:23 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/19 11:17:54 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 09:26:52 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	rev_rotate(t_list **stack)
 	t_list	*tmp;
 	t_list	*end;
 
+	if (!(*stack) || ft_lstsize(*stack) < 2)
+		return ;
 	end = ft_lstlast(*stack);
 	tmp = lstbeforelast(*stack);
 	tmp->next = NULL;

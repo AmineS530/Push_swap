@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 11:43:37 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 19:20:47 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 11:26:08 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	push_b(t_list **stack_a, t_list **stack_b)
 {
 	t_list	*tmp;
 
-	if (ft_lstsize(*stack_a) <= 1)
+	if (!(*stack_a))
 		return ;
 	if ((*stack_b))
 		push(stack_a, stack_b);

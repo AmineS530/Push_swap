@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:27:52 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 19:03:34 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 10:55:38 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,17 +84,25 @@ long	get_max(t_list *stack)
 
 int	max_index(t_list *stack)
 {
-	t_list	*head;
-	int		pos;
-	int		max_index;
 
-	head = stack;
-	pos = stack->position;
-	while (head != NULL)
+	t_list	*node;
+	int		i;
+	int		tmp;
+	int		a;
+
+	node = stack;
+	i = node->position;
+	tmp = 1;
+	a = 1;
+	while (node)
 	{
-		if (head->position > pos)
-			pos = head->position;
+		if (node->position > i)
+		{
+			a = tmp;
+			i = node->position;
+		}
+		node = node->next;
+		tmp++;
 	}
-	max_index = pos;
-	return (max_index);
+	return (a);
 }
