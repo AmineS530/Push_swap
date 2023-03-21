@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/20 11:40:23 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 13:29:45 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,21 +63,4 @@ int	is_sorted(t_list *stack)
 		head = head->next;
 	}
 	return (1);
-}
-
-int	ft_sqrt(int nb)
-{
-	long	uwu;
-
-	uwu = 1;
-	if (uwu < 0)
-		return (0);
-	while ((uwu * uwu) < nb)
-	{
-		uwu++;
-	}
-	if ((uwu * uwu) == nb)
-		return (uwu);
-	else
-		return (uwu);
 }
