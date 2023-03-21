@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:27:52 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 10:55:38 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 11:54:42 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,29 +80,4 @@ long	get_max(t_list *stack)
 	if (min > -2147483649)
 		return (min);
 	return (head->content);
-}
-
-int	max_index(t_list *stack)
-{
-
-	t_list	*node;
-	int		i;
-	int		tmp;
-	int		a;
-
-	node = stack;
-	i = node->position;
-	tmp = 1;
-	a = 1;
-	while (node)
-	{
-		if (node->position > i)
-		{
-			a = tmp;
-			i = node->position;
-		}
-		node = node->next;
-		tmp++;
-	}
-	return (a);
 }

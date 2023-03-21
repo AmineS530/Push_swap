@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 11:07:51 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 12:24:48 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void		indexing(t_kit *kit);
 void		print_pos(t_list *head);
 long		get_min(t_list *stack);
 long		get_max(t_list *stack);
-int			max_index(t_list *stack);
 
 // stacks
 void		ft_make_stacks(t_kit *stuff);
@@ -81,9 +80,11 @@ void		sort_two(t_list **stack);
 void		sort_three(t_list **stack);
 void		sort_four(t_kit *data);
 void		sort_five(t_kit *data);
-void		sort_bigger_than_five(t_kit *data);
+void		sort_big(t_kit *data);
 
 // sort_utils
-void	stacka_to_b(t_kit *data);
+void		stacka_to_b(t_kit *data);
+void		stackb_to_a(t_kit *data);
+int			max_index(t_list *stack);
 
 #endif

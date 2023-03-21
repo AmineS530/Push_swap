@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 11:24:22 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 12:26:27 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,16 @@ void	sort_five(t_kit *data)
 	}
 }
 
-void	sort_bigger_than_five(t_kit *data)
+void	sort_big(t_kit *data)
 {
 	int			uwu;
 
 	data->i = 0;
 	uwu = ((ft_sqrt(data->x) / 2));
 	if (uwu == 0)
-		data->chunk_size = (ft_lstsize(data->a) + (data->x % uwu));
+		data->chunk_size = (ft_lstsize(data->a));
 	else
-		data->chunk_size = (ft_lstsize(data->a) / uwu) + (data->x % uwu);
+		data->chunk_size = (ft_lstsize(data->a) / uwu);
 	printf("\n chunk size %d\n number of chunks %d\n", data->chunk_size, uwu);
 	if (!is_sorted(data->a))
 	{
@@ -88,9 +88,9 @@ void	sort_bigger_than_five(t_kit *data)
 		push_b(&data->a, &data->b);
 		while (data->b->next != NULL)
 		{
-			if (max_index(data->b) == 1)
+			if (data->b->position == ft_lstsize(data->b) - 1)
 				push_a(&data->a, &data->b);
-			if (max_index(data->b) >=(ft_lstsize(data->b)) / 2)
+			if (max_index(data->b) >= (ft_lstsize(data->b)) / 2)
 				rev_rotate_b(&data->b);
 			else if (max_index(data->b) <= (ft_lstsize(data->b)) / 2)
 				rotate_b(&data->b);
