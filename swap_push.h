@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 15:28:10 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/21 20:50:35 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define SWAP_PUSH_H
 
 # include "Utils/libft/libft.h"
-# include <math.h>
+# include "Utils/get_next_line/get_next_line.h"
 # define RED "\e[31m"
 # define YELLOW "\e[33m"
 # define GREEN "\e[32m"
@@ -56,6 +56,8 @@ long		get_max(t_list *stack);
 
 // stacks
 void		ft_make_stacks(t_kit *stuff);
+
+// heart
 void		ft_sort(t_kit *stuff);
 
 // operations
@@ -87,5 +89,10 @@ void		stacka_to_b(t_kit *data);
 void		stackb_to_a(t_kit *data);
 int			max_index(t_list *stack);
 int			is_rev_sorted(t_list *stack);
+
+// Checker
+void		apply_input(char *str, t_kit *stack);
+void		the_error(t_kit	*stacks);
+void		instructions_check(char *str, t_kit *stack);
 
 #endif

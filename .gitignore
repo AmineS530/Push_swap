@@ -1,6 +1,6 @@
 .DS_Store
 push-swap-tester-42/
-push_swap_visualizer/
+MY_PUSH_SWAP_TESTER/
 *.txt
 # Prerequisites
 *.d
