@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 20:50:35 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/22 12:35:48 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,14 @@ void		check_arg(char *arg);
 
 // tools
 int			better_ft_isdigit(char *nbr);
-void		print_elements(t_list *head);
+// void		print_elements(t_list *head);
 t_list		*lstbeforelast(t_list *lst);
 int			is_sorted(t_list *stack);
+int			is_rev_sorted(t_list *stack);
 
 // tools_2
 void		indexing(t_kit *kit);
-void		print_pos(t_list *head);
+// void		print_pos(t_list *head);
 long		get_min(t_list *stack);
 long		get_max(t_list *stack);
 
@@ -88,7 +89,7 @@ int			ft_sqrt(int nb);
 void		stacka_to_b(t_kit *data);
 void		stackb_to_a(t_kit *data);
 int			max_index(t_list *stack);
-int			is_rev_sorted(t_list *stack);
+int			min_index(t_list *stack);
 
 // Checker
 void		apply_input(char *str, t_kit *stack);

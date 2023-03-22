@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 17:12:30 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 21:18:12 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/22 12:29:32 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,15 @@ void	sort_three(t_list **stack)
 	long	max;
 
 	max = get_max((*stack));
-	if ((*stack)->content == max)
-		rotate_a(stack);
-	else if ((*stack)->next->content == max)
-		rev_rotate_a(stack);
-	if ((*stack)->content > (*stack)->next->content)
-		swap_a(stack);
+	if (!is_sorted(*stack))
+	{
+		if ((*stack)->content == max)
+			rotate_a(stack);
+		else if ((*stack)->next->content == max)
+			rev_rotate_a(stack);
+		if ((*stack)->content > (*stack)->next->content)
+			swap_a(stack);
+	}
 }
 
 void	sort_four(t_kit *data)
@@ -51,18 +54,19 @@ void	sort_five(t_kit *data)
 {
 	if (!is_sorted(data->a))
 	{
-		while (data->a->position < data->x && data->a->position != 0)
-			rotate_a(&data->a);
-		while (data->a->position >= data->x && data->a->position != 0)
-			rev_rotate_a(&data->a);
-		push_b(&data->a, &data->b);
-		while (data->a->position != 1)
-		{
-			if (data->a->position > data->x)
-				rev_rotate_a(&data->a);
-			else
+		if (min_index(data->a) < 2)
+			while (data->a->position != 0)
 				rotate_a(&data->a);
-		}
+		else if (min_index(data->a) >= 2)
+			while (data->a->position != 0)
+				rev_rotate_a(&data->a);
+		push_b(&data->a, &data->b);
+		if (min_index(data->a) < 2)
+			while (data->a->position != 1)
+				rotate_a(&data->a);
+		else if (min_index(data->a) >= 2)
+			while (data->a->position != 1)
+				rev_rotate_a(&data->a);
 		push_b(&data->a, &data->b);
 		sort_three(&data->a);
 		push_a(&data->a, &data->b);
@@ -79,7 +83,7 @@ void	sort_big(t_kit *data)
 	if (uwu == 0)
 		data->chunk_size = (data->x % uwu);
 	else
-		data->chunk_size = (data->x / uwu) + (data->x % uwu);
+		data->chunk_size = (data->x / uwu) - (data->x % uwu);
 	if (data->x == 100)
 		data->chunk_size = 17;
 	else if (data->x >= 500)

@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 10:31:31 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/21 15:56:26 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/22 12:37:16 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,18 +86,26 @@ int	max_index(t_list *stack)
 	return (index_max);
 }
 
-int	is_rev_sorted(t_list *stack)
+int	min_index(t_list *stack)
 {
 	t_list	*head;
 	int		i;
+	int		moves_to_smallest;
+	int		index_max;
 
 	head = stack;
-	i = 0;
-	while (head != NULL && head->next != NULL)
+	i = head->position;
+	moves_to_smallest = 0;
+	index_max = ft_lstsize(stack) - 1;
+	while (head)
 	{
-		if (head->position < head->next->position)
-			return (0);
+		if (head->position < i)
+		{
+			index_max = moves_to_smallest;
+			i = head->position;
+		}
 		head = head->next;
+		moves_to_smallest++;
 	}
-	return (1);
+	return (index_max);
 }
