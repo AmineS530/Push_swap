@@ -56,6 +56,7 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
+	rm -rf checker_bonus
 	make -C $(LIBFT) fclean
 
 re: fclean all
