@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/18 22:00:40 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/22 16:12:56 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	check_for_digits(t_kit *thing)
 		{
 			if (!better_ft_isdigit(thing->nmiro[thing->i]))
 			{
-				printf("found this shit %s\n", thing->nmiro[thing->i]);
 				ft_putstr_fd(RED "Error\nInvalid Characters" DEFAULT, 2);
 				exit(EXIT_FAILURE);
 			}

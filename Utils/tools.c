@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/22 12:33:26 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/22 16:13:06 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	better_ft_isdigit(char *nbr)
 	return (ft_isdigit(nbr[i]));
 }
 
-// TODO: remove printf;
 /*void	print_elements(t_list *head)
 {
 	t_list	*current_node;
