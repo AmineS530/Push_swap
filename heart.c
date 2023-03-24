@@ -6,11 +6,15 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:32:16 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/22 11:26:58 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 20:42:55 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "swap_push.h"
+void	check(void)
+{
+	system("leaks push_swap");
+}
 
 int	main(int argc, char *argv[])
 {

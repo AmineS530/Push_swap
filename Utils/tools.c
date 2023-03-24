@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/22 16:13:06 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 20:48:47 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int	better_ft_isdigit(char *nbr)
 	int	i;
 
 	i = 0;
-	if (nbr[i] == '-' || nbr[i] == '+')
+	while (nbr[i + 1] != '\0')
 	{
-		if (ft_isdigit(nbr[i + 1]))
-			return (1);
-		else
-			return (0);
+		if (nbr[i] == '-' || nbr[i] == '+')
+		{
+			if (ft_isdigit(nbr[i + 1]))
+				return (1);
+			else
+				return (ft_isdigit(nbr[i]));
+		}
+		i++;
 	}
 	return (ft_isdigit(nbr[i]));
 }

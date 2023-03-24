@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/22 16:12:56 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 20:50:33 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,26 +38,20 @@ void	get_numbers(t_kit *thing, char **argv)
 		thing->i++;
 	}
 	thing->nmiro = ft_split(thing->joined, ' ');
+	free (thing->joined);
 	while (thing->nmiro[thing->x])
 		thing->x++;
 }
 
 void	check_for_digits(t_kit *thing)
 {
-	int	j;
-
 	thing->i = 0;
 	while (thing->nmiro[thing->i])
 	{
-		j = 0;
-		while (thing->nmiro[thing->i][j])
+		if (!better_ft_isdigit(thing->nmiro[thing->i]))
 		{
-			if (!better_ft_isdigit(thing->nmiro[thing->i]))
-			{
-				ft_putstr_fd(RED "Error\nInvalid Characters" DEFAULT, 2);
-				exit(EXIT_FAILURE);
-			}
-			j++;
+			ft_putstr_fd(RED "Error\nInvalid Characters" DEFAULT, 2);
+			exit(EXIT_FAILURE);
 		}
 		thing->i++;
 	}
@@ -70,11 +64,15 @@ void	convert_ncheck_dups(t_kit *nb)
 	int			k;
 
 	nb->mal = malloc(sizeof(long) * (nb->x + 1));
+	if (!nb->mal)
+		return ;
 	while (nb->nmiro[i])
 	{
 		nb->mal[i] = ft_atoi(nb->nmiro[i]);
+		free(nb->nmiro[i]);
 		i++;
 	}
+	free(nb->nmiro);
 	while (j < nb->x)
 	{
 		k = 0;

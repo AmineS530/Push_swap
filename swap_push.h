@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/22 12:35:48 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 20:49:40 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,7 @@ int			min_index(t_list *stack);
 void		apply_input(char *str, t_kit *stack);
 void		the_error(t_kit	*stacks);
 void		instructions_check(char *str, t_kit *stack);
+
+void		check(void);
 
 #endif
