@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:15:56 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/24 20:50:33 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 21:57:46 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ t_kit	apply_checks(char **argv)
 	get_numbers(&tool, argv);
 	check_for_digits(&tool);
 	convert_ncheck_dups(&tool);
+	ft_free_split(&tool);
 	check_minmax(&tool);
 	return (tool);
 }
@@ -55,6 +56,9 @@ void	check_for_digits(t_kit *thing)
 		}
 		thing->i++;
 	}
+	thing->mal = malloc(sizeof(long) * (thing->x + 1));
+	if (!thing->mal)
+		return ;
 }
 
 void	convert_ncheck_dups(t_kit *nb)
@@ -63,16 +67,11 @@ void	convert_ncheck_dups(t_kit *nb)
 	static int	j;
 	int			k;
 
-	nb->mal = malloc(sizeof(long) * (nb->x + 1));
-	if (!nb->mal)
-		return ;
 	while (nb->nmiro[i])
 	{
 		nb->mal[i] = ft_atoi(nb->nmiro[i]);
-		free(nb->nmiro[i]);
 		i++;
 	}
-	free(nb->nmiro);
 	while (j < nb->x)
 	{
 		k = 0;

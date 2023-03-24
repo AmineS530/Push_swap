@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 11:02:00 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/24 20:48:47 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 21:54:31 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,18 @@ int	is_rev_sorted(t_list *stack)
 		head = head->next;
 	}
 	return (1);
+}
+
+void	ft_free_split(t_kit	*info)
+{
+	int	i;
+
+	i = 0;
+	while (info->nmiro[i] != NULL)
+	{
+		free(info->nmiro[i]);
+		info->nmiro[i] = NULL;
+		i++;
+	}
+	free(info->nmiro);
 }

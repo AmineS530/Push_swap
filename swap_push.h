@@ -6,7 +6,7 @@
 /*   By: asadik <asadik@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 09:17:09 by asadik            #+#    #+#             */
-/*   Updated: 2023/03/24 20:49:40 by asadik           ###   ########.fr       */
+/*   Updated: 2023/03/24 21:55:08 by asadik           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int			better_ft_isdigit(char *nbr);
 t_list		*lstbeforelast(t_list *lst);
 int			is_sorted(t_list *stack);
 int			is_rev_sorted(t_list *stack);
+void		ft_free_split(t_kit	*info);
 
 // tools_2
 void		indexing(t_kit *kit);
